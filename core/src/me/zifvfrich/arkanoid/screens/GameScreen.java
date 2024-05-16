@@ -36,7 +36,7 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
 
         if (ball.checkCollision(paddle)) {
             ball.speedY = -ball.speedY;
-            ball.speedX = ball.speedX * MathUtils.randomSign();
+            ball.speedX = ball.speedX;
         }
 
         Brick brick;
@@ -46,7 +46,7 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
                 game.audioManager.playHitSound();
                 iter.remove();
                 ball.speedY = -ball.speedY;
-                ball.speedX = ball.speedX * MathUtils.randomSign();
+                ball.speedX = -ball.speedX;
             }
         }
     }
