@@ -9,6 +9,9 @@ import me.zifvfrich.arkanoid.screens.GameScreen;
 
 public class Level1 extends Level {
     public Level1() {
+        ballSpeed = 400;
+        paddleSpeed = 250;
+
         bricks = new Array<>(false, 14*4);
         background = Assets.background2;
 

@@ -13,7 +13,7 @@ public class Ball {
     int boundX1;
     int boundX2;
     int boundY;
-    public Ball(TextureRegion texture, int x, int y, int boundX1, int boundX2, int boundY) {
+    public Ball(TextureRegion texture, int x, int y, int boundX1, int boundX2, int boundY, int speed) {
         this.texture = texture;
         collisionBox = new Circle(0, 0, texture.getRegionHeight()/2);
 
@@ -21,8 +21,8 @@ public class Ball {
         this.boundX2 = boundX2;
         this.boundY = boundY;
 
-        speedY = 500;
-        speedX = 500;
+        speedY = speed;
+        speedX = speed;
     }
     public void update(float delta) {
         collisionBox.y += (speedY * delta);

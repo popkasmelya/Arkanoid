@@ -26,8 +26,8 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
         this.level = level;
         boundsDrawer = new ShapeRenderer();
         boundsColor = new Color(132/255f, 126/255f, 135/255f, 1);
-        paddle = new Paddle(Assets.paddle, 34, boundX1, boundX2);
-        ball = new Ball(Assets.ball, 100, 100, boundX1, boundX2, boundY);
+        paddle = new Paddle(Assets.paddle, 34, boundX1, boundX2, level.paddleSpeed);
+        ball = new Ball(Assets.ball, 100, 100, boundX1, boundX2, boundY, level.ballSpeed);
     }
     @Override
     public void update(float delta) {
@@ -36,7 +36,7 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
 
         if (ball.checkCollision(paddle)) {
             ball.speedY = -ball.speedY;
-            ball.speedX = ball.speedX;
+            ball.speedX = ball.speedX * MathUtils.randomSign();
         }
 
         Brick brick;
@@ -46,7 +46,6 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
                 game.audioManager.playHitSound();
                 iter.remove();
                 ball.speedY = -ball.speedY;
-                ball.speedX = -ball.speedX;
             }
         }
     }

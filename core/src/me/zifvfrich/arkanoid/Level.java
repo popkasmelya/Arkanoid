@@ -6,6 +6,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.TiledDrawable;
 import com.badlogic.gdx.utils.Array;
 
 public abstract class Level {
+    public int ballSpeed;
+    public int paddleSpeed;
     public TiledDrawable background;
     public Array<Brick> bricks;
     public abstract void draw(SpriteBatch batch);

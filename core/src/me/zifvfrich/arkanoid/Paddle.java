@@ -11,8 +11,8 @@ public class Paddle {
     Rectangle collisionBox;
     int bound1;
     int bound2;
-    final int speedX = 250;
-    public Paddle(TextureRegion texture, int y, int bound1, int bound2) {
+    int speedX;
+    public Paddle(TextureRegion texture, int y, int bound1, int bound2, int speed) {
         this.texture = texture;
 
         collisionBox = new Rectangle(0, y, texture.getRegionWidth(), texture.getRegionHeight());
@@ -20,6 +20,9 @@ public class Paddle {
 
         this.bound1 = bound1;
         this.bound2 = bound2;
+
+        speedX = speed;
+
     }
     public void update(float delta) {
         if (Gdx.input.isKeyPressed(Input.Keys.A)) {
