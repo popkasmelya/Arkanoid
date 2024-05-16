@@ -16,8 +16,8 @@ public class LevelSelectMenu extends AbstractMenu{
 
         elements = new Array<>(true, 3);
         elements.addAll(new Text("level 1", Assets.font80, 244, 723, new GameScreen(this.game, new Level1())),
-                new Text("level 1", Assets.font80, 244, 499, game.levelSelectScreen),
-                new Text("level 1", Assets.font80, 244, 275, game.levelSelectScreen));
+                new Text("level 2", Assets.font80, 244, 499, game.levelSelectScreen),
+                new Text("level 3", Assets.font80, 244, 275, game.levelSelectScreen));
 
         currentIndex = 0;
         currentColor = Color.WHITE;
