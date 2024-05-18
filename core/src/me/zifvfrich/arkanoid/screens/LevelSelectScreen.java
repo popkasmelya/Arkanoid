@@ -25,9 +25,7 @@ public class LevelSelectScreen extends AbstractMenuScreen {
 
     @Override
     public void show() {
-        if (menu == null)
-            menu = new LevelSelectMenu(game);
-
+        menu = new LevelSelectMenu(game);
     }
 
     @Override

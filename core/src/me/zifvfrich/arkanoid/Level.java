@@ -8,11 +8,13 @@ import com.badlogic.gdx.utils.Array;
 public abstract class Level {
     public int ballSpeed;
     public int paddleSpeed;
+    public int lifes;
+    public int scorePerBrick;
     public TiledDrawable background;
     public Array<Brick> bricks;
-    public abstract void draw(SpriteBatch batch);
-    public abstract void update();
-
-
-
+    public void draw(SpriteBatch batch) {
+        for (Brick brick : bricks) {
+            brick.draw(batch);
+        }
+    }
 }

@@ -7,20 +7,21 @@ import me.zifvfrich.arkanoid.Brick;
 import me.zifvfrich.arkanoid.Level;
 import me.zifvfrich.arkanoid.screens.GameScreen;
 
-public class Level1 extends Level {
-    public Level1() {
-        ballSpeed = 400;
-        paddleSpeed = 250;
-        scorePerBrick = 20;
-        lifes = 3;
+public class Level2 extends Level {
+    public Level2() {
+        ballSpeed = 500;
+        paddleSpeed = 300;
+        scorePerBrick = 40;
+        lifes = 4;
 
         bricks = new Array<>(false, 14*4);
-        background = Assets.background2;
+        background = Assets.background1;
 
-        for (int y = GameScreen.boundY-Brick.height; y > GameScreen.boundY-Brick.height*3-1; y -= Brick.height) {
-            for (int x = GameScreen.boundX1+1; x < GameScreen.boundX2; x += Brick.width) {
+        for (int y = GameScreen.boundY- Brick.height*3; y > GameScreen.boundY-Brick.height*8-1; y -= Brick.height) {
+            for (int x = GameScreen.boundX1+1; x < GameScreen.boundX2; x += Brick.width*2) {
                 bricks.add(new Brick(Assets.bricks.random(), x, y));
             }
         }
+
     }
 }

@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Intersector;
 
 public class Ball {
-    Circle collisionBox;
+    public Circle collisionBox;
     TextureRegion texture;
     public int speedX;
     public int speedY;
@@ -15,7 +15,7 @@ public class Ball {
     int boundY;
     public Ball(TextureRegion texture, int x, int y, int boundX1, int boundX2, int boundY, int speed) {
         this.texture = texture;
-        collisionBox = new Circle(0, 0, texture.getRegionHeight()/2);
+        collisionBox = new Circle(x, y, texture.getRegionHeight()/2);
 
         this.boundX1 = boundX1;
         this.boundX2 = boundX2;
