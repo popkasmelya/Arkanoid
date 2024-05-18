@@ -7,7 +7,6 @@ import me.zifvfrich.arkanoid.Assets;
 import me.zifvfrich.arkanoid.AbstractMenuScreen;
 
 public class WelcomeScreen extends AbstractMenuScreen {
-    int i;
     public WelcomeScreen(Arkanoid game) {
         super(game);
     }

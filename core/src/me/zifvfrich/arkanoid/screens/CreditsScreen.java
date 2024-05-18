@@ -18,10 +18,6 @@ public class CreditsScreen extends AbstractMenuScreen {
             game.setScreen(game.mainMenuScreen);
     }
     @Override
-    public void show() {
-
-    }
-    @Override
     public void render(float delta) {
         update(delta);
 
@@ -37,13 +33,5 @@ public class CreditsScreen extends AbstractMenuScreen {
         Assets.font80.draw(batch, "used sounds authors", 31, 227);
         Assets.font80.draw(batch, "dneproman", 195, 147);
         batch.end();
-    }
-    @Override
-    public void resume() {
-
-    }
-    @Override
-    public void dispose() {
-
     }
 }

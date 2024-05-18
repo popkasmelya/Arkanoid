@@ -44,13 +44,9 @@ public class Ball {
         batch.draw(texture, collisionBox.x-collisionBox.radius, collisionBox.y-collisionBox.radius);
     }
     public boolean checkCollision(Paddle paddle) {
-        if (Intersector.overlaps(collisionBox, paddle.collisionBox))
-            return true;
-        return false;
+        return Intersector.overlaps(collisionBox, paddle.collisionBox);
     }
     public boolean checkCollision(Brick brick) {
-        if (Intersector.overlaps(collisionBox, brick.collisonBox))
-            return true;
-        return false;
+        return Intersector.overlaps(collisionBox, brick.collisonBox);
     }
 }

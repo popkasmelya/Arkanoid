@@ -2,8 +2,6 @@ package me.zifvfrich.arkanoid.menus;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import me.zifvfrich.arkanoid.Arkanoid;
 import me.zifvfrich.arkanoid.Assets;

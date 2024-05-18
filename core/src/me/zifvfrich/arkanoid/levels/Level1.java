@@ -1,6 +1,5 @@
 package me.zifvfrich.arkanoid.levels;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import me.zifvfrich.arkanoid.Assets;
 import me.zifvfrich.arkanoid.Brick;

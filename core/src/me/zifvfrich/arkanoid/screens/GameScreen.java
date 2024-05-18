@@ -16,14 +16,13 @@ public class GameScreen extends AbstractScreen<Arkanoid> {
     private final int levelIndex;
     private int score;
     private int lifeCount;
-    private Level level;
-    private ShapeRenderer boundsDrawer;
-    private Color boundsColor;
-    private float time;
+    private final Level level;
+    private final ShapeRenderer boundsDrawer;
+    private final Color boundsColor;
     private float timer;
     private boolean lose = false;
     private boolean win = false;
-    private Level[] levels;
+    private final Level[] levels;
     public static final int boundX1 = 23;
     public static final int boundX2 = 696;
     public static final int boundY = 864;

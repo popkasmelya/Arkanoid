@@ -31,24 +31,4 @@ public class MainMenuScreen extends AbstractMenuScreen {
         menu.draw(batch);
         batch.end();
     }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
-
-    }
-
-    @Override
-    public void dispose() {
-
-    }
 }

@@ -5,7 +5,6 @@ import com.badlogic.gdx.Input;
 import me.zifvfrich.arkanoid.AbstractMenuScreen;
 import me.zifvfrich.arkanoid.Arkanoid;
 import me.zifvfrich.arkanoid.menus.LevelSelectMenu;
-import me.zifvfrich.arkanoid.menus.SettingsMenu;
 
 public class LevelSelectScreen extends AbstractMenuScreen {
     LevelSelectMenu menu;
@@ -13,7 +12,6 @@ public class LevelSelectScreen extends AbstractMenuScreen {
     public LevelSelectScreen(Arkanoid game) {
         super(game);
     }
-
     @Override
     public void update(float delta) {
         moveBackground(delta);
@@ -22,12 +20,10 @@ public class LevelSelectScreen extends AbstractMenuScreen {
         if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE))
             game.setScreen(game.mainMenuScreen);
     }
-
     @Override
     public void show() {
         menu = new LevelSelectMenu(game);
     }
-
     @Override
     public void render(float delta) {
         update(delta);
@@ -36,25 +32,5 @@ public class LevelSelectScreen extends AbstractMenuScreen {
         drawBackground();
         menu.draw(batch);
         batch.end();
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
-
-    }
-
-    @Override
-    public void dispose() {
-
     }
 }

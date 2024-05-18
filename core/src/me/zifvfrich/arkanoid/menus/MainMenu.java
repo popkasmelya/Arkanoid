@@ -2,7 +2,6 @@ package me.zifvfrich.arkanoid.menus;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import me.zifvfrich.arkanoid.Arkanoid;
 import me.zifvfrich.arkanoid.Assets;
@@ -10,7 +9,7 @@ import me.zifvfrich.arkanoid.Assets;
 public class MainMenu extends AbstractMenu {
     public MainMenu(Arkanoid game) {
         super(game);
-        elements = new Array<Text>(true, 4);
+        elements = new Array<>(true, 4);
         elements.addAll(new Text("play", Assets.font80, 288, 559, game.levelSelectScreen),
                         new Text("settings", Assets.font80, 213, 463, game.settingsScreen),
                         new Text("credits", Assets.font80, 232, 367, game.creditsScreen),

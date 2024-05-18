@@ -2,7 +2,6 @@ package me.zifvfrich.arkanoid;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -25,7 +24,7 @@ public class Assets {
     public static BitmapFont font80;
     public static Color backgroundColor;
     public static Array<TiledDrawable> backgrounds;
-    private static Preferences preferences;
+    public static Preferences preferences;
     public static void load(){
 
         preferences = Gdx.app.getPreferences("me.zifvfrich.arkanoid.settings");
@@ -38,7 +37,7 @@ public class Assets {
         background3 = new TiledDrawable(new TextureRegion(Assets.atlas, 64, 0, 32, 32));
         background4 = new TiledDrawable(new TextureRegion(Assets.atlas, 96, 0, 32, 32));
 
-        backgrounds = new Array<TiledDrawable>(false, 4);
+        backgrounds = new Array<>(false, 4);
         backgrounds.add(background1, background2, background3, background4);
 
         bricks = new Array<>(true, 6);
@@ -60,10 +59,5 @@ public class Assets {
         parameter.size = 80;
         font80 = generator.generateFont(parameter);
         generator.dispose();
-    }
-    public static void dispose() {
-        atlas.dispose();
-        font80.dispose();
-        font65.dispose();
     }
 }
